@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "HelloSchematics",
+  "title": "Hello Option Schema",
+  "type": "object",
+  "description": "Say hello to someone",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the person",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "Who do you want to greeting?"
+    },
+    "project": {
+      "type": "string",
+      "description": "Generate in specific Angular CLI workspace project"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
